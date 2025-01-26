@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expense-Tracker</title>
+  <title>Expense Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Expense-Tracker</h1>
-    <form action="" id="expense-form" >
-      <input type="text" id="description" placeholder="Enter Description" required>
-      <input type="text" id="amount" placeholder="Enter Amount" required>
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
       <button type="submit">Add Expense</button>
     </form>
 
@@ -25,15 +25,14 @@
           <th>Action</th>
         </tr>
       </thead>
-
       <tbody>
-        <!-- Expenses will be dynamically added here -->
+        <!-- Expenses will appear here -->
       </tbody>
     </table>
 
     <div id="summary">
       <h2>Summary</h2>
-      <p>Total Expenses: <span id="total-expenses">0</span></p>
+      <p>Total Expenses: <span id="total-expenses">₹0</span></p>
     </div>
   </div>
   <script src="script.js"></script>
