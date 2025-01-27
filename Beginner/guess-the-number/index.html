@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <p id="message">Welcome! I'm thinking of a number between 1 and 100.</p>
+        <div id="difficulty-selection">
+            <p>Select difficulty:</p>
+            <button onclick="selectDifficulty('easy')">Easy (10 chances)</button>
+            <button onclick="selectDifficulty('medium')">Medium (5 chances)</button>
+            <button onclick="selectDifficulty('hard')">Hard (3 chances)</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <input type="number" id="guess-input" min="1" max="100">
+            <button onclick="makeGuess()">Guess</button>
+            <p id="attempts">Attempts left: <span id="attempts-left"></span></p>
+            <p id="timer">Time: <span id="time">00:00</span></p>
+        </div>
+        <button id="play-again" style="display: none;" onclick="resetGame()">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
