@@ -1,4 +1,11 @@
 {
-  "expenses": [],
-  "lastID": 2
+  "expenses": [
+    {
+      "id": 5,
+      "date": "2025-01-26",
+      "description": "shadab",
+      "amount": 2000000000
+    }
+  ],
+  "lastID": 5
 }
