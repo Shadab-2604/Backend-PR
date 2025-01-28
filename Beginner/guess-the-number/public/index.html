@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
-<link rel="stylesheet" href="style.css">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Number Guessing Game</h1>
-        <p id="message">Welcome! I'm thinking of a number between 1 and 100.</p>
-        
+        <h1>Guess the Number Game</h1>
+        <p id="message">welcome! Iam Thinking of a Number between 1 and 100.</p>
+
         <div id="difficulty-selection">
-            <p>Select difficulty:</p>
+            <p>Select Difficulty</p>
             <button class="difficulty-btn easy" onclick="selectDifficulty('easy')">Easy (10 chances)</button>
-            <button class="difficulty-btn medium" onclick="selectDifficulty('medium')">Medium (5 chances)</button>
-            <button class="difficulty-btn hard" onclick="selectDifficulty('hard')">Hard (3 chances)</button>
+            <button class="difficulty-btn easy" onclick="selectDifficulty('medium')">Medium (5 chances)</button>
+            <button class="difficulty-btn easy" onclick="selectDifficulty('hard')">Hard (3 chances)</button>
         </div>
 
         <div id="game-area" style="display: none;">
@@ -29,13 +29,11 @@
                     <div class="stat-value" id="time">00:00</div>
                 </div>
             </div>
-            
             <input type="number" id="guess-input" min="1" max="100" placeholder="Enter your guess">
             <button class="guess-btn" onclick="makeGuess()">Make Guess</button>
         </div>
-
         <button id="play-again" style="display: none;" onclick="resetGame()">Play Again</button>
     </div>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>

@@ -1,0 +1,44 @@
+// public/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="converter-container">
+            <div class="unit-type-selector">
+                <button class="unit-type-btn active" data-type="length">Length</button>
+                <button class="unit-type-btn" data-type="weight">Weight</button>
+                <button class="unit-type-btn" data-type="temperature">Temperature</button>
+            </div>
+            
+            <div class="converter-form">
+                <input type="number" id="input-value" placeholder="Enter value">
+                
+                <select id="from-unit">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                
+                <div class="swap-btn">⇄</div>
+                
+                <select id="to-unit">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                
+                <button id="convert-btn">Convert</button>
+            </div>
+            
+            <div class="result" id="result">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
