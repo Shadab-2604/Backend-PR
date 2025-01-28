@@ -1,13 +1,16 @@
-// public/index.html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit Converter</title>
+    <title>Enhanced Unit Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="theme-toggle">
+        <button id="theme-btn">🌙</button>
+    </div>
+    
     <div class="container">
         <h1>Unit Converter</h1>
         <div class="converter-container">
@@ -15,30 +18,27 @@
                 <button class="unit-type-btn active" data-type="length">Length</button>
                 <button class="unit-type-btn" data-type="weight">Weight</button>
                 <button class="unit-type-btn" data-type="temperature">Temperature</button>
+                <button class="unit-type-btn" data-type="volume">Volume</button>
+                <button class="unit-type-btn" data-type="area">Area</button>
+                <button class="unit-type-btn" data-type="currency">Currency</button>
             </div>
             
             <div class="converter-form">
                 <input type="number" id="input-value" placeholder="Enter value">
-                
-                <select id="from-unit">
-                    <!-- Options will be populated by JavaScript -->
-                </select>
-                
+                <select id="from-unit"></select>
                 <div class="swap-btn">⇄</div>
-                
-                <select id="to-unit">
-                    <!-- Options will be populated by JavaScript -->
-                </select>
-                
+                <select id="to-unit"></select>
                 <button id="convert-btn">Convert</button>
             </div>
             
-            <div class="result" id="result">
-                <!-- Result will be displayed here -->
+            <div class="result" id="result"></div>
+            
+            <div class="history-container">
+                <h3>Conversion History</h3>
+                <div id="history-list"></div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-

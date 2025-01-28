@@ -4,15 +4,20 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Serve static files from public directory
 app.use(express.static('public'));
+app.use(express.json());
 
-// Serve the main page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Currency rates endpoint
+app.get('/api/currency-rates', async (req, res) => {
+    try {
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        const data = await response.json();
+        res.json(data.rates);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch currency rates' });
+    }
 });
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
