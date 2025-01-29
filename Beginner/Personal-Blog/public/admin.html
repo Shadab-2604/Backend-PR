@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Personal Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Admin</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/admin.html" class="active">Admin</a>
+        </nav>
+    </header>
+
+    <main id="adminContent">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <form id="login">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="adminPanel" style="display: none;">
+            <button id="newArticleBtn">New Article</button>
+            <div id="articlesList"></div>
+        </div>
+
+        <div id="articleForm" style="display: none;">
+            <h2>Add/Edit Article</h2>
+            <form id="article">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="content" placeholder="Content" required></textarea>
+                <button type="submit">Save</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>
